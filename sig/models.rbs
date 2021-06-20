@@ -1,0 +1,8 @@
+# TypeProf 0.14.1
+
+# Classes
+class ApplicationRecord
+end
+
+class Entry < ApplicationRecord
+end

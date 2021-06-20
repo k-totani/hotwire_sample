@@ -1,0 +1,22 @@
+# TypeProf 0.14.1
+
+# Classes
+class ApplicationController
+end
+
+class EntriesController < ApplicationController
+  @entries: untyped
+  @entry: untyped
+
+  def index: -> untyped
+  def show: -> untyped
+  def new: -> untyped
+  def edit: -> nil
+  def create: -> String
+  def update: -> String
+  def destroy: -> String
+
+  private
+  def set_entry: -> untyped
+  def entry_params: -> untyped
+end

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbol-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbol-track': 'reload' %>
+  <%= stimulus_include_tags %>
+  <%= javascript_include_tag 'turbo', type: 'module-shim' %>
+  <%= yield :head %>
+</head>
+
+<body>
+<%= render 'shared/header' %>
+<div class="container-fluid mb-3">
+  <div class="row">
+    <%= render 'shared/header' %>
+
+    <div class="container-fluid" style="padding-top: 40px;">
+      <div class="row">
+        <%= render 'shared/sidebar' %>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <%= turbo_frame_tag 'flash' do %>
+            <%= render 'shared/flash', locals: { flash: flash } %>
+          <% end %>
+          <%= yield %>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'shared/footer' %>
+</body>
+
+</body>
+</html>

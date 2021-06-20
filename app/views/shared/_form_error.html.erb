@@ -1,0 +1,7 @@
+<% if messages.any? %>
+  <ul class="list-unstyled">
+    <% messages.each do |message| %>
+      <li><small class="text-danger"><%= message %></small></li>
+    <% end %>
+  </ul>
+<% end %>

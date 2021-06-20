@@ -1,0 +1,16 @@
+<h1>Entries</h1>
+
+<%= link_to 'New Entry', new_entry_path %>
+
+<div class="table-responsive">
+  <div class="table table-striped table-sm">
+    <div class="row">
+      <div class="col-3"><%= t('entry.title') %></div>
+      <div class="col-3">Body</div>
+      <div class="col-3" colspan="2"></div>
+    </div>
+    <div id="entries">
+      <%= render @entries %>
+    </div>
+  </div>
+</div>
